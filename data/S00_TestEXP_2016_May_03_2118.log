@@ -1,0 +1,171 @@
+10.8307 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 0.,  0.,  0.]), colorSpace='rgb', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor instance at 0x7fdd202085a8>, name='window1', pos=[0, 0], screen=0, size=array([1366,  768]), stereo=False, units=u'norm', useFBO=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.8308 	EXP 	window1: recordFrameIntervals = False
+10.9961 	EXP 	window1: recordFrameIntervals = True
+11.1673 	WARNING 	t of last frame was 20.36ms (=1/49)
+11.3079 	WARNING 	t of last frame was 26.05ms (=1/38)
+11.4969 	EXP 	window1: recordFrameIntervals = False
+11.6354 	EXP 	Created Stim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font=u'Arial', fontFiles=[], height=0.1, italic=False, name='Stim', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'default text', units=u'norm', win=Window(...), wrapWidth=1)
+11.6483 	EXP 	Created Fixation_Cross = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font=u'Arial', fontFiles=[], height=0.5, italic=False, name='Fixation_Cross', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'+', units=u'norm', win=Window(...), wrapWidth=1)
+11.6521 	EXP 	Imported Conditions.csv as conditions, 4 conditions, 1 params
+11.6530 	EXP 	Created sequence: random, trialTypes=4, nReps=5, seed=None
+11.6538 	EXP 	New trial (rep=0, index=0): {'Word': u'Password_3'}
+11.6642 	EXP 	window1: recordFrameIntervals = False
+11.6716 	EXP 	Stim: text = u'Password_3'
+11.6716 	EXP 	Stim: autoDraw = True
+11.6718 	EXP 	window1: recordFrameIntervals = False
+12.1835 	EXP 	Stim: autoDraw = False
+12.1835 	EXP 	Fixation_Cross: autoDraw = True
+13.1572 	EXP 	New trial (rep=0, index=1): {'Word': u'Password_2'}
+13.1661 	EXP 	window1: recordFrameIntervals = False
+13.1743 	EXP 	Fixation_Cross: autoDraw = False
+13.1743 	EXP 	Stim: text = u'Password_2'
+13.1743 	EXP 	Stim: autoDraw = True
+13.1744 	EXP 	window1: recordFrameIntervals = False
+13.6795 	EXP 	Stim: autoDraw = False
+13.6795 	EXP 	Fixation_Cross: autoDraw = True
+14.6641 	EXP 	New trial (rep=0, index=2): {'Word': u'Password_4'}
+14.6732 	EXP 	window1: recordFrameIntervals = False
+14.6806 	EXP 	Fixation_Cross: autoDraw = False
+14.6806 	EXP 	Stim: text = u'Password_4'
+14.6806 	EXP 	Stim: autoDraw = True
+14.6808 	EXP 	window1: recordFrameIntervals = False
+15.1882 	EXP 	Stim: autoDraw = False
+15.1882 	EXP 	Fixation_Cross: autoDraw = True
+16.1556 	EXP 	New trial (rep=0, index=3): {'Word': u'Password_1'}
+16.1637 	EXP 	window1: recordFrameIntervals = False
+16.1707 	EXP 	Fixation_Cross: autoDraw = False
+16.1707 	EXP 	Stim: text = u'Password_1'
+16.1707 	EXP 	Stim: autoDraw = True
+16.1708 	EXP 	window1: recordFrameIntervals = False
+16.6779 	EXP 	Stim: autoDraw = False
+16.6779 	EXP 	Fixation_Cross: autoDraw = True
+17.6629 	EXP 	New trial (rep=1, index=0): {'Word': u'Password_3'}
+17.6720 	EXP 	window1: recordFrameIntervals = False
+17.6794 	EXP 	Fixation_Cross: autoDraw = False
+17.6794 	EXP 	Stim: text = u'Password_3'
+17.6794 	EXP 	Stim: autoDraw = True
+17.6796 	EXP 	window1: recordFrameIntervals = False
+18.1847 	EXP 	Stim: autoDraw = False
+18.1847 	EXP 	Fixation_Cross: autoDraw = True
+19.1546 	EXP 	New trial (rep=1, index=1): {'Word': u'Password_4'}
+19.1616 	EXP 	window1: recordFrameIntervals = False
+19.1711 	EXP 	Fixation_Cross: autoDraw = False
+19.1711 	EXP 	Stim: text = u'Password_4'
+19.1711 	EXP 	Stim: autoDraw = True
+19.1712 	EXP 	window1: recordFrameIntervals = False
+19.6762 	EXP 	Stim: autoDraw = False
+19.6762 	EXP 	Fixation_Cross: autoDraw = True
+20.6618 	EXP 	New trial (rep=1, index=2): {'Word': u'Password_1'}
+20.6692 	EXP 	window1: recordFrameIntervals = False
+20.6774 	EXP 	Fixation_Cross: autoDraw = False
+20.6774 	EXP 	Stim: text = u'Password_1'
+20.6774 	EXP 	Stim: autoDraw = True
+20.6775 	EXP 	window1: recordFrameIntervals = False
+21.1839 	EXP 	Stim: autoDraw = False
+21.1839 	EXP 	Fixation_Cross: autoDraw = True
+22.1528 	EXP 	New trial (rep=1, index=3): {'Word': u'Password_2'}
+22.1605 	EXP 	window1: recordFrameIntervals = False
+22.1688 	EXP 	Fixation_Cross: autoDraw = False
+22.1688 	EXP 	Stim: text = u'Password_2'
+22.1688 	EXP 	Stim: autoDraw = True
+22.1690 	EXP 	window1: recordFrameIntervals = False
+22.6756 	EXP 	Stim: autoDraw = False
+22.6756 	EXP 	Fixation_Cross: autoDraw = True
+23.6618 	EXP 	New trial (rep=2, index=0): {'Word': u'Password_4'}
+23.6710 	EXP 	window1: recordFrameIntervals = False
+23.6781 	EXP 	Fixation_Cross: autoDraw = False
+23.6781 	EXP 	Stim: text = u'Password_4'
+23.6781 	EXP 	Stim: autoDraw = True
+23.6785 	EXP 	window1: recordFrameIntervals = False
+24.1870 	EXP 	Stim: autoDraw = False
+24.1870 	EXP 	Fixation_Cross: autoDraw = True
+25.1527 	EXP 	New trial (rep=2, index=1): {'Word': u'Password_1'}
+25.1612 	EXP 	window1: recordFrameIntervals = False
+25.1701 	EXP 	Fixation_Cross: autoDraw = False
+25.1701 	EXP 	Stim: text = u'Password_1'
+25.1701 	EXP 	Stim: autoDraw = True
+25.1702 	EXP 	window1: recordFrameIntervals = False
+25.6771 	EXP 	Stim: autoDraw = False
+25.6771 	EXP 	Fixation_Cross: autoDraw = True
+26.6599 	EXP 	New trial (rep=2, index=2): {'Word': u'Password_3'}
+26.6674 	EXP 	window1: recordFrameIntervals = False
+26.6757 	EXP 	Fixation_Cross: autoDraw = False
+26.6757 	EXP 	Stim: text = u'Password_3'
+26.6757 	EXP 	Stim: autoDraw = True
+26.6758 	EXP 	window1: recordFrameIntervals = False
+27.1812 	EXP 	Stim: autoDraw = False
+27.1812 	EXP 	Fixation_Cross: autoDraw = True
+28.1509 	EXP 	New trial (rep=2, index=3): {'Word': u'Password_2'}
+28.1586 	EXP 	window1: recordFrameIntervals = False
+28.1667 	EXP 	Fixation_Cross: autoDraw = False
+28.1667 	EXP 	Stim: text = u'Password_2'
+28.1667 	EXP 	Stim: autoDraw = True
+28.1669 	EXP 	window1: recordFrameIntervals = False
+28.6736 	EXP 	Stim: autoDraw = False
+28.6736 	EXP 	Fixation_Cross: autoDraw = True
+29.6588 	EXP 	New trial (rep=3, index=0): {'Word': u'Password_3'}
+29.6657 	EXP 	window1: recordFrameIntervals = False
+29.6746 	EXP 	Fixation_Cross: autoDraw = False
+29.6746 	EXP 	Stim: text = u'Password_3'
+29.6746 	EXP 	Stim: autoDraw = True
+29.6747 	EXP 	window1: recordFrameIntervals = False
+30.1806 	EXP 	Stim: autoDraw = False
+30.1806 	EXP 	Fixation_Cross: autoDraw = True
+31.1503 	EXP 	New trial (rep=3, index=1): {'Word': u'Password_2'}
+31.1579 	EXP 	window1: recordFrameIntervals = False
+31.1662 	EXP 	Fixation_Cross: autoDraw = False
+31.1662 	EXP 	Stim: text = u'Password_2'
+31.1662 	EXP 	Stim: autoDraw = True
+31.1664 	EXP 	window1: recordFrameIntervals = False
+31.6727 	EXP 	Stim: autoDraw = False
+31.6727 	EXP 	Fixation_Cross: autoDraw = True
+32.6582 	EXP 	New trial (rep=3, index=2): {'Word': u'Password_4'}
+32.6687 	EXP 	window1: recordFrameIntervals = False
+32.6764 	EXP 	Fixation_Cross: autoDraw = False
+32.6764 	EXP 	Stim: text = u'Password_4'
+32.6764 	EXP 	Stim: autoDraw = True
+32.6766 	EXP 	window1: recordFrameIntervals = False
+33.1825 	EXP 	Stim: autoDraw = False
+33.1825 	EXP 	Fixation_Cross: autoDraw = True
+34.1501 	EXP 	New trial (rep=3, index=3): {'Word': u'Password_1'}
+34.1576 	EXP 	window1: recordFrameIntervals = False
+34.1651 	EXP 	Fixation_Cross: autoDraw = False
+34.1651 	EXP 	Stim: text = u'Password_1'
+34.1651 	EXP 	Stim: autoDraw = True
+34.1655 	EXP 	window1: recordFrameIntervals = False
+34.6727 	EXP 	Stim: autoDraw = False
+34.6727 	EXP 	Fixation_Cross: autoDraw = True
+35.6577 	EXP 	New trial (rep=4, index=0): {'Word': u'Password_4'}
+35.6670 	EXP 	window1: recordFrameIntervals = False
+35.6744 	EXP 	Fixation_Cross: autoDraw = False
+35.6744 	EXP 	Stim: text = u'Password_4'
+35.6744 	EXP 	Stim: autoDraw = True
+35.6746 	EXP 	window1: recordFrameIntervals = False
+36.1811 	EXP 	Stim: autoDraw = False
+36.1811 	EXP 	Fixation_Cross: autoDraw = True
+37.1658 	EXP 	New trial (rep=4, index=1): {'Word': u'Password_1'}
+37.1731 	EXP 	window1: recordFrameIntervals = False
+37.1807 	EXP 	Fixation_Cross: autoDraw = False
+37.1807 	EXP 	Stim: text = u'Password_1'
+37.1807 	EXP 	Stim: autoDraw = True
+37.1812 	EXP 	window1: recordFrameIntervals = False
+37.6860 	EXP 	Stim: autoDraw = False
+37.6860 	EXP 	Fixation_Cross: autoDraw = True
+38.6571 	EXP 	New trial (rep=4, index=2): {'Word': u'Password_2'}
+38.6663 	EXP 	window1: recordFrameIntervals = False
+38.6739 	EXP 	Fixation_Cross: autoDraw = False
+38.6739 	EXP 	Stim: text = u'Password_2'
+38.6739 	EXP 	Stim: autoDraw = True
+38.6740 	EXP 	window1: recordFrameIntervals = False
+39.1812 	EXP 	Stim: autoDraw = False
+39.1812 	EXP 	Fixation_Cross: autoDraw = True
+40.1640 	EXP 	New trial (rep=4, index=3): {'Word': u'Password_3'}
+40.1716 	EXP 	window1: recordFrameIntervals = False
+40.1797 	EXP 	Fixation_Cross: autoDraw = False
+40.1797 	EXP 	Stim: text = u'Password_3'
+40.1797 	EXP 	Stim: autoDraw = True
+40.1798 	EXP 	window1: recordFrameIntervals = False
+40.6870 	EXP 	Stim: autoDraw = False
+40.6870 	EXP 	Fixation_Cross: autoDraw = True
+41.4230 	DATA 	Keypress: lalt
+41.6851 	EXP 	window1: mouseVisible = True

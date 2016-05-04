@@ -1,0 +1,87 @@
+5.5894 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 0.,  0.,  0.]), colorSpace='rgb', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor instance at 0x7ff632b1f5a8>, name='window1', pos=[0, 0], screen=0, size=array([1366,  768]), stereo=False, units=u'norm', useFBO=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.5895 	EXP 	window1: recordFrameIntervals = False
+5.7541 	EXP 	window1: recordFrameIntervals = True
+5.9382 	EXP 	window1: recordFrameIntervals = False
+6.2105 	EXP 	Created text = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font=u'Arial', fontFiles=[], height=0.1, italic=False, name='text', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'default text', units=u'norm', win=Window(...), wrapWidth=1)
+6.2138 	EXP 	Imported Conditions.csv as conditions, 4 conditions, 1 params
+6.2151 	EXP 	Created sequence: random, trialTypes=4, nReps=5, seed=None
+6.2162 	EXP 	New trial (rep=0, index=0): {'Word': u'Password_3'}
+6.2265 	EXP 	window1: recordFrameIntervals = False
+6.2336 	EXP 	text: text = u'Password_3'
+6.2336 	EXP 	text: autoDraw = True
+6.2338 	EXP 	window1: recordFrameIntervals = False
+7.2099 	EXP 	New trial (rep=0, index=1): {'Word': u'Password_1'}
+7.2170 	EXP 	window1: recordFrameIntervals = False
+7.2258 	EXP 	text: autoDraw = False
+7.2258 	EXP 	text: autoDraw = False
+7.2258 	EXP 	text: text = u'Password_1'
+7.2258 	EXP 	text: autoDraw = True
+7.2259 	EXP 	window1: recordFrameIntervals = False
+8.1987 	EXP 	New trial (rep=0, index=2): {'Word': u'Password_2'}
+8.2065 	EXP 	window1: recordFrameIntervals = False
+8.2145 	EXP 	text: autoDraw = False
+8.2145 	EXP 	text: autoDraw = False
+8.2145 	EXP 	text: text = u'Password_2'
+8.2145 	EXP 	text: autoDraw = True
+8.2146 	EXP 	window1: recordFrameIntervals = False
+9.2024 	EXP 	New trial (rep=0, index=3): {'Word': u'Password_4'}
+9.2091 	EXP 	window1: recordFrameIntervals = False
+9.2182 	EXP 	text: autoDraw = False
+9.2182 	EXP 	text: autoDraw = False
+9.2182 	EXP 	text: text = u'Password_4'
+9.2182 	EXP 	text: autoDraw = True
+9.2183 	EXP 	window1: recordFrameIntervals = False
+10.1910 	EXP 	New trial (rep=1, index=0): {'Word': u'Password_2'}
+10.1976 	EXP 	window1: recordFrameIntervals = False
+10.2072 	EXP 	text: autoDraw = False
+10.2072 	EXP 	text: autoDraw = False
+10.2072 	EXP 	text: text = u'Password_2'
+10.2072 	EXP 	text: autoDraw = True
+10.2074 	EXP 	window1: recordFrameIntervals = False
+11.1963 	EXP 	New trial (rep=1, index=1): {'Word': u'Password_4'}
+11.2069 	EXP 	window1: recordFrameIntervals = False
+11.2133 	EXP 	text: autoDraw = False
+11.2133 	EXP 	text: autoDraw = False
+11.2133 	EXP 	text: text = u'Password_4'
+11.2133 	EXP 	text: autoDraw = True
+11.2134 	EXP 	window1: recordFrameIntervals = False
+12.2020 	EXP 	New trial (rep=1, index=2): {'Word': u'Password_3'}
+12.2111 	EXP 	window1: recordFrameIntervals = False
+12.2173 	EXP 	text: autoDraw = False
+12.2173 	EXP 	text: autoDraw = False
+12.2173 	EXP 	text: text = u'Password_3'
+12.2173 	EXP 	text: autoDraw = True
+12.2175 	EXP 	window1: recordFrameIntervals = False
+13.2056 	EXP 	New trial (rep=1, index=3): {'Word': u'Password_1'}
+13.2142 	EXP 	window1: recordFrameIntervals = False
+13.2208 	EXP 	text: autoDraw = False
+13.2208 	EXP 	text: autoDraw = False
+13.2208 	EXP 	text: text = u'Password_1'
+13.2208 	EXP 	text: autoDraw = True
+13.2210 	EXP 	window1: recordFrameIntervals = False
+14.2104 	EXP 	New trial (rep=2, index=0): {'Word': u'Password_4'}
+14.2214 	EXP 	window1: recordFrameIntervals = False
+14.2276 	EXP 	text: autoDraw = False
+14.2276 	EXP 	text: autoDraw = False
+14.2276 	EXP 	text: text = u'Password_4'
+14.2276 	EXP 	text: autoDraw = True
+14.2278 	EXP 	window1: recordFrameIntervals = False
+15.2154 	EXP 	New trial (rep=2, index=1): {'Word': u'Password_3'}
+15.2231 	EXP 	window1: recordFrameIntervals = False
+15.2303 	EXP 	text: autoDraw = False
+15.2303 	EXP 	text: text = u'Password_3'
+15.2303 	EXP 	text: autoDraw = True
+15.2305 	EXP 	window1: recordFrameIntervals = False
+16.2203 	EXP 	New trial (rep=2, index=2): {'Word': u'Password_2'}
+16.2327 	EXP 	window1: recordFrameIntervals = False
+16.2392 	EXP 	text: autoDraw = False
+16.2392 	EXP 	text: text = u'Password_2'
+16.2392 	EXP 	text: autoDraw = True
+16.2394 	EXP 	window1: recordFrameIntervals = False
+17.2247 	EXP 	New trial (rep=2, index=3): {'Word': u'Password_1'}
+17.2355 	EXP 	window1: recordFrameIntervals = False
+17.2420 	EXP 	text: autoDraw = False
+17.2420 	EXP 	text: text = u'Password_1'
+17.2420 	EXP 	text: autoDraw = True
+17.2421 	EXP 	window1: recordFrameIntervals = False
+17.5373 	DATA 	Keypress: escape
