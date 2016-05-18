@@ -16,7 +16,12 @@ os.chdir('/home/melian/Documents/BrainLock')
 from Password_Setup import *
 
 #PRE-LOAD STIMS
-Random_Words = ['goodbye','hola','bonjour']
+Random_Words = ["mit","skt","tag","ttl","bul","uno","dye","rep","bit","urd","rev","hkj","gov","key","fil","mic","mfr","vic",
+    "due","tow","yam","kum","boa","dix","sqq","sax","bar","din","ajo","mid","rco","esr","psv","bub","ode","ely","fid","buy",
+    "eeg","tiu","wad","hot","hrh","per","hay","abb","caf","twp","mir","aft","dbh","run","gie","jud","syr","wey","whr","dpt",
+    "ufa","era","mch","tob","moi","wry","oat","dfm","zoe","dmz","bim","dew","hyp","eta","woo","wpc","exp","avo","bpc","lsd",
+    "alp","dag","tub","yet","axa","aso","bag","rah","pep","brl","rnr","ctv","ton","fet","yak","pit","cut","coy","anu","mfg",
+    "rel","don"]
 
 #Initial Password Input
 
@@ -28,30 +33,8 @@ win = visual.Window(size=(500, 500), fullscr=False, screen=0, allowGUI=False, al
     blendMode='avg', useFBO=True,
     )
 
-#CREATE TEXT OBJECTS 
-Password = visual.TextStim(win=win, ori=0, name='Password',
-    text=passfinal,font=u'Arial',
-    pos=[0, 0], height=0.5, wrapWidth=300,
-    color=u'white', colorSpace='rgb', opacity=1,
-    depth=0.0)
+#CREATE NONTEXT OBJECTS 
 
-Random_0 = visual.TextStim(win=win, ori=0, name='Random_2',
-    text=Random_Words[0],    font=u'Arial',
-    pos=[0, 0], height=0.5, wrapWidth=None,
-    color=u'white', colorSpace='rgb', opacity=1,
-    depth=0.0)
-
-Random_1 = visual.TextStim(win=win, ori=0, name='Random_1',
-    text=Random_Words[1],    font=u'Arial',
-    pos=[0, 0], height=0.5, wrapWidth=None,
-    color=u'white', colorSpace='rgb', opacity=1,
-    depth=0.0)
-
-Random_2 = visual.TextStim(win=win, ori=0, name='Random_1',
-    text=Random_Words[2],    font=u'Arial',
-    pos=[0, 0], height=0.5, wrapWidth=None,
-    color=u'white', colorSpace='rgb', opacity=1,
-    depth=0.0)
 
 fixation = visual.GratingStim(win=win, mask='cross', size=0.5, pos=[0,0], sf=0.1)
 
@@ -71,16 +54,22 @@ all_text = [Password,Random_0,Random_1,Random_2]
 
 #raw_input("enter to start")
 
-for i in range(10):
+for i in range(100):
     
-    text = all_text[i % 4]
+    word = visual.TextStim(win=win, ori=0, name='word',
+    text=Random_Words[i],font=u'Arial',
+    pos=[0, 0], height=0.5, wrapWidth=300,
+    color=u'white', colorSpace='rgb', opacity=1,
+    depth=0.0)
+
+   # text = all_text[i % 4]
 
     for frameN in range(200):
 
         if 0 <= frameN < 50:
             fixation.draw()
         if 50 <= frameN < 150:    
-            text.draw()
+            word.draw()
             sync.draw()
         if 150 <= frameN < 200:
             fixation.draw()
