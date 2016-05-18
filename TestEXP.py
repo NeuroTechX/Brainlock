@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.83.04), Wed 04 May 2016 05:22:18 PM EDT
+This experiment was created using PsychoPy2 Experiment Builder (v1.83.04), Wed 04 May 2016 05:31:05 PM EDT
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
@@ -34,7 +34,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' %(expInfo['participant'], expNam
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath=u'/home/melian/Documents/BrainLock/TestEXP.psyexp',
+    originPath=None,
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 #save a log file for detail verbose info

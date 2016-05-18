@@ -1,0 +1,27 @@
+7.2465 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 0.,  0.,  0.]), colorSpace='rgb', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor instance at 0x7fca0b05e758>, name='window1', pos=[0, 0], screen=0, size=array([1366,  768]), stereo=False, units=u'norm', useFBO=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.2466 	EXP 	window1: recordFrameIntervals = False
+7.4115 	EXP 	window1: recordFrameIntervals = True
+7.5977 	EXP 	window1: recordFrameIntervals = False
+7.7356 	EXP 	Created Instructions = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font=u'Arial', fontFiles=[], height=0.5, italic=False, name='Instructions', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Please \nEnter Password', units=u'norm', win=Window(...), wrapWidth=1)
+7.7564 	EXP 	Created Stim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.5, italic=False, name='Stim', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'default text', units=u'norm', win=Window(...), wrapWidth=1)
+7.7637 	EXP 	Created Fixation_Cross = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.5, italic=False, name='Fixation_Cross', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'+', units=u'norm', win=Window(...), wrapWidth=1)
+7.7714 	EXP 	Instructions: autoDraw = True
+9.4411 	DATA 	Keypress: right
+9.4444 	EXP 	Imported Conditions.csv as conditions, 4 conditions, 1 params
+9.4451 	EXP 	Created sequence: random, trialTypes=4, nReps=5, seed=None
+9.4458 	EXP 	New trial (rep=0, index=0): {'Word': u'Word_4'}
+9.4582 	EXP 	window1: recordFrameIntervals = False
+9.4640 	EXP 	Instructions: autoDraw = False
+9.4640 	EXP 	Stim: text = u'Word_4'
+9.4641 	EXP 	window1: recordFrameIntervals = False
+9.9735 	EXP 	Stim: autoDraw = True
+10.5608 	EXP 	Stim: autoDraw = False
+10.5608 	EXP 	Fixation_Cross: autoDraw = True
+11.5342 	EXP 	New trial (rep=0, index=1): {'Word': u'Word_3'}
+11.5457 	EXP 	window1: recordFrameIntervals = False
+11.5513 	EXP 	Fixation_Cross: autoDraw = False
+11.5513 	EXP 	Fixation_Cross: autoDraw = False
+11.5513 	EXP 	Stim: text = u'Word_3'
+11.5514 	EXP 	window1: recordFrameIntervals = False
+12.0693 	EXP 	Stim: autoDraw = True
+12.5400 	DATA 	Keypress: escape
