@@ -1,7 +1,7 @@
 # IMPORT STATEMENTS
 
 from __future__ import division  # so that 1/3=0.333 instead of 1/3=0
-from psychopy import locale_setup, visual, core, data, event, logging, sound, gui
+from psychopy import locale_setup, visual, core, event, logging, sound, gui
 from psychopy.constants import *  # things like STARTED, FINISHED
 import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, rad2deg, linspace, asarray
@@ -53,44 +53,16 @@ Random_2 = visual.TextStim(win=win, ori=0, name='Random_1',
     color=u'white', colorSpace='rgb', opacity=1,
     depth=0.0)
 
+fixation = visual.GratingStim(win=win, mask='cross', size=0.5, pos=[0,0], sf=0.1)
 
-fixation = visual.ShapeStim(win, units='', lineWidth=1, lineColor='white', 
+sync = visual.ShapeStim(win, units='', lineWidth=1.5, lineColor='white', 
     lineColorSpace='rgb', fillColor='white', fillColorSpace='rgb', 
-    vertices=((-0.5,0.1),
-(-0.1,0.1),
-(-0.1,0.5),
-(0.1,0.5),
-(0.1,0.1),
-(0.5,0.1),
-(0.5,-0.1),
-(0.1,-0.1),
-(0.1,-0.5),
-(-0.1,-0.5),
-(-0.1,-0.1),
-(-0.5,-0.1)),
-    closeShape=True, pos=(0, 0), size=1, ori=0.0, opacity=1.0, 
-    contrast=1.0, depth=0, interpolate=False, name=None, 
-    autoLog=None, autoDraw=False)
-
-
-'''fixation = visual.ShapeStim(win, units='', lineWidth=1.5, lineColor='white', 
-    lineColorSpace='rgb', fillColor=None, fillColorSpace='rgb', 
-    vertices=((-0.5,0.1),(-0.5,-0.1),(0.5,-0.1),(0.5,0.1)),
+    vertices=((0.8, 0.9), (0.9, 0.9), (0.9, 0.8), (0.8,0.8)),
     closeShape=True, pos=(0, 0), size=1, ori=0.0, opacity=1.0, 
     contrast=1.0, depth=0, interpolate=True, name=None, 
     autoLog=None, autoDraw=False)
-'''
 
-flash = visual.GratingStim(win=win, mask='cross', size=1, pos=[0,0], sf=1)
-
-'''visual.ShapeStim(win, units='', lineWidth=1.5, lineColor='white', 
-    lineColorSpace='rgb', fillColor='white', fillColorSpace='rgb', 
-    vertices=((-0.5, -0.5), (-0.5, 0.5), (0.5, 0.5), (0.5,-0.5)),
-    closeShape=True, pos=(0, 0), size=1, ori=0.0, opacity=1.0, 
-    contrast=1.0, depth=0, interpolate=True, name=None, 
-    autoLog=None, autoDraw=False, mask='cross')'''
-
-flash.draw()
+fixation.draw()
 win.flip()
 
 all_text = [Password,Random_0,Random_1,Random_2]
@@ -109,8 +81,10 @@ for i in range(10):
             fixation.draw()
         if 50 <= frameN < 150:    
             text.draw()
+            sync.draw()
         if 150 <= frameN < 200:
             fixation.draw()
+
 
         win.flip()
 
