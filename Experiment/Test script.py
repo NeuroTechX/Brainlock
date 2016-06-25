@@ -7,11 +7,21 @@ import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, rad2deg, linspace, asarray
 from numpy.random import random, randint, normal, shuffle
 import os  # handy system and path functions
+import csv
 import sys # to get file system encoding
+from pylsl import StreamInlet, resolve_stream
 
-#######
+#######  LSL Streaming
+print("looking for an EEG stream...")
+streams = resolve_stream('type','EEG')
+
+# create a new inlet to read from the stream
+inlet = StreamInlet(streams[0])
+
 #####
 
+
+#####Getting the CSV File ready
 
 #Make sure you are in the correct directory
 os.chdir('/home/sydney/Brainlock')
@@ -27,12 +37,15 @@ Random_Words = ["mit","skt","tag","ttl","bul","uno","dye","rep","bit","urd","rev
     "alp","dag","tub","yet","axa","aso","bag","rah","pep","brl","rnr","ctv","ton","fet","yak","pit","cut","coy","anu","mfg",
     "rel","don"]
 
+##Test data is here just to manage experiment
+random_Test=["mit","skt","tag"]
+
 ## PASWORD SETUP WILL BE IMPLEMENTED IN FUTURE VERSIONS
 #Initial Password Input
 #passfinal = 'hi' #passwordsetup()
 
 #INTRO SCREEN
-win = visual.Window(size=(500, 500), fullscr=False, screen=0, allowGUI=False, allowStencil=False,
+win = visual.Window(size=(1000, 1000), fullscr=False, screen=0, allowGUI=False, allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True,
     )
@@ -59,29 +72,47 @@ win.flip()
 
 #raw_input("enter to start")
 
-for i in range(100):
-    
-    word = visual.TextStim(win=win, ori=0, name='word',
-    text=Random_Words[i],font=u'Arial',
-    pos=[0, 0], height=0.5, wrapWidth=300,
-    color=u'white', colorSpace='rgb', opacity=1,
-    depth=0.0)
+arr_data=[]
 
-   # text = all_text[i % 4]
+with open('data3.csv','wb') as f:
+    writer = csv.writer(f)
+            
+    for i in range(3):
+        
+        word = visual.TextStim(win=win, ori=0, name='word',
+        text=random_Test[i],font=u'Arial',
+        pos=[0, 0], height=0.5, wrapWidth=300,
+        color=u'white', colorSpace='rgb', opacity=1,
+        depth=0.0)      
+       # fd = open('data.csv','a')
+       # text = all_text[i % 4]
+        for frameN in range(200):
 
-    for frameN in range(200):
+            if 0 <= frameN < 50:	   	
+                fixation.draw()
+                sample,timestamp = inlet.pull_sample()
+                data=["+",timestamp]
+                data.extend(sample)
+                writer.writerow(data)
+            if 50 <= frameN < 150:     
+                word.draw()
+                sync.draw()
+                sample,timestamp = inlet.pull_sample()
+                data=[random_Test[i],timestamp]
+                data.extend(sample)
+                writer.writerow(data)
+            if 150 <= frameN < 200: 
+                fixation.draw()
+                sample,timestamp = inlet.pull_sample()
+                data=["+",timestamp]
+                data.extend(sample)
+                writer.writerow(data)
+        
+            win.flip()
 
-        if 0 <= frameN < 50:
-            fixation.draw()
-        if 50 <= frameN < 150:    
-            word.draw()
-            sync.draw()
-        if 150 <= frameN < 200:
-            fixation.draw()
-
-
-        win.flip()
+        
 
 win.close()
+
 
 

@@ -3,6 +3,7 @@ N400 based EEG biometric authentication system
 
 Requirements: 
 - Python 2.7+ (https://www.python.org/)
+-Python OpenBCI (https://github.com/OpenBCI/OpenBCI_Python)
 - Psychopy (http://www.psychopy.org/)
 
 This project has two components - the data collection interface (Experiment) and the implementation of the brainlock (Lock). 
