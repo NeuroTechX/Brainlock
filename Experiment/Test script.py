@@ -39,7 +39,7 @@ Random_Words = ["mit","skt","tag","ttl","bul","uno","dye","rep","bit","urd","rev
 
 ##Test data is here just to manage experiment
 random_Test=["BRB","JJWY","TTYL","KHYB","NASA","TLW","DNA","IMSS","FBI","ISSTE","CSI","FPTI","AIDS","ZUP","AKA","ICZ","NBA","MLS",
-   "APA","NZQA"]
+   "APA","NZQA", "MBA", "HVDW", "GPA", "AWCE", "PS3", "JOWT", "HDMI", "QCST", "HTTP", "CLSR"]
 
 ## PASWORD SETUP WILL BE IMPLEMENTED IN FUTURE VERSIONS
 #Initial Password Input
