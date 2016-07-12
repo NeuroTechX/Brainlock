@@ -20,62 +20,30 @@ inlet = StreamInlet(streams[0])
 
 #####
 
-print("Found it!")
+
 #####Getting the CSV File ready
 
 #Make sure you are in the correct directory
 os.chdir('/home/sydney/Brainlock')
 
 #IMPORT CUSTOM MODULES
-#from Password_Setup import *
+from Password_Setup import *
 
 #PRE-LOAD STIMS
+Random_Words = ["mit","skt","tag","ttl","bul","uno","dye","rep","bit","urd","rev","hkj","gov","key","fil","mic","mfr","vic",
+    "due","tow","yam","kum","boa","dix","sqq","sax","bar","din","ajo","mid","rco","esr","psv","bub","ode","ely","fid","buy",
+    "eeg","tiu","wad","hot","hrh","per","hay","abb","caf","twp","mir","aft","dbh","run","gie","jud","syr","wey","whr","dpt",
+    "ufa","era","mch","tob","moi","wry","oat","dfm","zoe","dmz","bim","dew","hyp","eta","woo","wpc","exp","avo","bpc","lsd",
+    "alp","dag","tub","yet","axa","aso","bag","rah","pep","brl","rnr","ctv","ton","fet","yak","pit","cut","coy","anu","mfg",
+    "rel","don"]
 
-knownA= range(10)
-unknowA= range(10)
-
-
-with open('acr.csv','r') as acr:
-
-    reader=csv.reader(acr)
-    knownA = reader.next()
-    unknownA= reader.next()
-
-
-
-##Print for Testing Purposes
-#print knownA
-#print unknownA
-
-acrL=range(len(knownA))    
-
-
-#Create the List of Acronyms with known and Unknown
-for i in range(len(knownA)):
-    if i % 2 == 0:
-        acrL[i]=knownA[i]
-    else:
-        acrL[i]=unknownA[i]
-
-
-
-#Change this value if you would like to determine the number of Acronyms you want to use. Makes sure it is a multiple of 2. 
-lSize=62
-
-if lSize is not 0:
-    acrL=acrL[:lSize]
-    #print acrL
-    #print len(acrL)
-
-
-##### Create a CSV with the person's name. This is the person's ID until we determine
-    # how to do all the processing in python
-usern = raw_input("Enter your username:")
-#####
+##Test data is here just to manage experiment
+random_Test=["BRB","JJWY","TTYL","KHYB","NASA","TLW","DNA","IMSS","FBI","ISSTE","CSI","FPTI","AIDS","ZUP","AKA","ICZ","NBA","MLS",
+   "APA","NZQA", "MBA", "HVDW", "GPA", "AWCE", "PS3", "JOWT", "HDMI", "QCST", "HTTP", "CLSR"]
 
 ## PASWORD SETUP WILL BE IMPLEMENTED IN FUTURE VERSIONS
 #Initial Password Input
-
+#passfinal = 'hi' #passwordsetup()
 
 #INTRO SCREEN
 win = visual.Window(size=(1366, 768), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
@@ -95,7 +63,11 @@ sync = visual.ShapeStim(win, units='', lineWidth=1.5, lineColor='white',
     contrast=1.0, depth=0, interpolate=True, name=None, 
     autoLog=None, autoDraw=False)
 
-#win.flip()
+fixation.draw()
+
+win.flip()
+
+#all_text = [Password,Random_0,Random_1,Random_2]
 
 #DATA ACQUISTION LOOP
 
@@ -103,13 +75,13 @@ sync = visual.ShapeStim(win, units='', lineWidth=1.5, lineColor='white',
 
 arr_data=[]
 
-with open(usern+'.csv','wb') as f:
+with open('known.csv','wb') as f:
     writer = csv.writer(f)
             
-    for i in range(len(acrL)):
+    for i in range(len(random_Test)):
         
         word = visual.TextStim(win=win, ori=0, name='word',
-        text=acrL[i],font=u'Arial',
+        text=random_Test[i],font=u'Arial',
         pos=[0, 0], height=0.5, wrapWidth=300,
         color=u'white', colorSpace='rgb', opacity=1,
         depth=0.0)      
@@ -127,7 +99,7 @@ with open(usern+'.csv','wb') as f:
                 word.draw()
                 sync.draw()
                 sample,timestamp = inlet.pull_sample()
-                data=[acrL[i],timestamp]
+                data=[random_Test[i],timestamp]
                 data.extend(sample)
                 writer.writerow(data)
            # if 180 <= frameN < 240: 
