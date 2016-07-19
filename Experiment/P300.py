@@ -1,7 +1,7 @@
 # IMPORT STATEMENTS
 
 from __future__ import division  # so that 1/3=0.333 instead of 1/3=0
-from psychopy import locale_setup, visual, core, event, logging, sound, gui
+from psychopy import  visual, core, event, logging, sound, gui
 from psychopy.constants import *  # things like STARTED, FINISHED
 import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, rad2deg, linspace, asarray
