@@ -10,7 +10,15 @@ from numpy.random import random, randint, normal, shuffle
 import os  # handy system and path functions
 import csv
 import sys # to get file system encoding
-#from pylsl import StreamInlet, resolve_stream
+from pylsl import StreamInlet, resolve_stream
+
+#info = StreamInfo("MetaTester", "EEG", 8, 100)
+
+# now attach some meta-data (in accordance with XDF format,
+# see also code.google.com/p/xdf)
+
+# create outlet for the stream
+#outlet = StreamOutlet(info)
 
 #######  LSL Streaming
 print("looking for an EEG stream...")
@@ -21,19 +29,15 @@ inlet = StreamInlet(streams[0])
 
 #####
 
-#print("Found it!")
+print("Found it!")
 #####Getting the CSV File ready
 
 #Make sure you are in the correct directory
-os.chdir('C:\Users\Sydney\Documents\GitHub\Brainlock')
+os.chdir('/home/sydney/Brainlock')
 
 #IMPORT CUSTOM MODULES
 #from Password_Setup import *
 
-#PRE-LOAD STIMS
-
-knownA= range(10)
-unknowA= range(10)
 
 
 
@@ -47,15 +51,9 @@ unknowA= range(10)
 #Initial Password Input
 
 
-#INTRO SCREEN
-win = visual.Window(size=(1366, 768), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
-    monitor='testMonitor', color=[-1,-1,-1], colorSpace='rgb',
-    blendMode='avg', useFBO=True,
-    )
-
 
 #DATA ACQUISTION LOOP
-
+"""
 raw_input("enter to start")
 
 arr_data=[]
@@ -63,15 +61,18 @@ arr_data=[]
     
 with open('lsl.csv','wb') as f:
     writer = csv.writer(f)
-            
-    for i in range(len(acrL)):
-              
+                    
     while True:
         sample,timestamp = inlet.pull_sample()
         data=[timestamp]
         data.extend(sample)
         writer.writerow(data)
             
-
-
+"""
+while True:
+    # get a new sample (you can also omit the timestamp part if you're not
+    # interested in it)
+    sample, timestamps = inlet.pull_sample()
+    
+    print(timestamps, sample)
 

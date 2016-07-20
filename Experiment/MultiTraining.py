@@ -1,6 +1,7 @@
 # IMPORT STATEMENTS
 
 from __future__ import division  # so that 1/3=0.333 instead of 1/3=0
+from multiprocessing import Process
 from psychopy import locale_setup, visual, core, event, logging, sound, gui
 from psychopy.constants import *  # things like STARTED, FINISHED
 import numpy as np  # whole numpy lib is available, prepend 'np.'
@@ -18,13 +19,19 @@ streams = resolve_stream('type','EEG')
 # create a new inlet to read from the stream
 inlet = StreamInlet(streams[0])
 
-#####
-
 print("Found it!")
 #####Getting the CSV File ready
 
 #Make sure you are in the correct directory
 os.chdir('/home/sydney/Brainlock')
+
+
+#####
+
+
+####### Process for LSL
+
+
 
 #IMPORT CUSTOM MODULES
 #from Password_Setup import *
@@ -41,11 +48,6 @@ with open('acr.csv','r') as acr:
     knownA = reader.next()
     unknownA= reader.next()
 
-
-
-##Print for Testing Purposes
-#print knownA
-#print unknownA
 
 acrL=range(len(knownA))    
 
@@ -106,7 +108,16 @@ arr_data=[]
 clock=core.Clock()
 
 with open(usern+'.csv','wb') as f:
-    writer = csv.writer(f)        
+    writer = csv.writer(f)
+
+    def lsl(stim):
+        while True:
+            sample,timestamp = inlet.pull_sample()
+            data=[stim,timestamp]
+            data.extend(sample)
+            writer.writerow(data)
+
+
     for i in range(len(acrL)):
         
         word = visual.TextStim(win=win, ori=0, name='word',
@@ -114,56 +125,39 @@ with open(usern+'.csv','wb') as f:
         pos=[0, 0], height=0.5, wrapWidth=300,
         color=u'white', colorSpace='rgb', opacity=1,
         depth=0.0)      
-          
+        win.flip()  
         for frameN in range(180):
-            win.flip()
+            if frameN ==0:
+                print("Activates")
+                p= Process(target=lsl,args=("+",))
+                p.start()
+               
             if 0 <= frameN < 60:	   	
+                acrTrue= True
+                print("0-60: Time - %f",(clock.getTime()))
                 fixation.draw()
-                sample,timestamp = inlet.pull_sample()
-                data=["+",timestamp]
-                data.extend(sample)
-                writer.writerow(data)
-            if 60 <= frameN < 180:     
+                
+##                sample,timestamp = inlet.pull_sample()
+##                data=["+",timestamp]
+##                data.extend(sample)
+##                writer.writerow(data)
+            if frameN == 60:
+                p.terminate()
+                p= Process(target=lsl,args=(acrL[i],))
+                p.start()
+            if 60 <= frameN < 180:
                 word.draw()
-                sync.draw()
-                sample,timestamp = inlet.pull_sample()
-                data=["+",timestamp]
-                data.extend(sample)
-                writer.writerow(data)
-##            if 180<= frameN<250:
-##                sample,timestamp = inlet.pull_sample()
-##                data=["+",timestamp]
-##                data.extend(sample)
-##                writer.writerow(data)
-##            if 250<= frameN <750:
-##                sample,timestamp = inlet.pull_sample()
-##                data=[acrL[i],timestamp]
-##                data.extend(sample)
-##                writer.writerow(data)
-##        win.flip()
-##        sample,timestamp = inlet.pull_sample()
-##        nTime=timestamp+3.0
-##        while timestamp <nTime:
-##            if (nTime-3.0)<= timestamp <(nTime-2.0):
-##                print ("Fixation T: %f N: %f "%(timestamp, (nTime-2.0)))
-##                win.flip()
-##                fixation.draw()
-##                sample,timestamp = inlet.pull_sample()
-##                data=["+",timestamp]
-##                data.extend(sample)
-##                writer.writerow(data)
-##            if (nTime-2.0)<= timestamp <(nTime):
-##                print ("Fixation T: %f N: %f "%(timestamp, nTime))
-##                win.flip()
-##                word.draw()
-##                sample,timestamp = inlet.pull_sample()
-##                data=[acrL[i],timestamp]
-##                data.extend(sample)
-##                writer.writerow(data)
+                print("60-180: Time - %f",(clock.getTime()))
+                
+                #sample,timestamp = inlet.pull_sample()
+                #data=[acrL[i],timestamp]
+                #data.extend(sample)
+                #writer.writerow(data)
+
+        p.terminate()
         win.flip()
 
-        
-
+p.terminate()
 win.close()
 
 
