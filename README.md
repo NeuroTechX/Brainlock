@@ -1,14 +1,24 @@
 # Brainlock
 N400 based EEG biometric authentication system
 
-Requirements: 
+##Requirements: 
 - Python 2.7+ (https://www.python.org/)
--Python OpenBCI (https://github.com/OpenBCI/OpenBCI_Python)
 - Psychopy (http://www.psychopy.org/)
+- Python OpenBCI (https://github.com/OpenBCI/OpenBCI_Python)
+- Octave  
+- EEGLab (https://sccn.ucsd.edu/eeglab)
 
-This project has two components - the data collection interface (Experiment) and the implementation of the brainlock (Lock). 
+## Protocol 
 
-The Experiment phase will allow you to record you brain response to the presented words, and train a classifier to identify your specific brain response. The Lock component will allow you to test your new biometric signature. 
+The protocol has 3 steps that are associated with it:
 
-Currently Unimplemented Features: 
-Password_Setup.py is called on by WordPresentation_Training.py, and allows you to choose a specifc acronym as your target password, but is currently unimplemented. 
+1) Data Aquisition (Using Psychopy and OpenBCI)
+2) Signal Processing and Classification (Using EEGLab and Octave)
+3) Comparison of Signals
+
+
+### Data Aquisition
+
+For the Aquisition Script, you will need to run the Training script
+
+
